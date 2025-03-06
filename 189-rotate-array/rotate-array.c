@@ -3,9 +3,7 @@ void reverseBetween(int* arr, int startIndex, int endIndex) {
     int* p2;
     p1 = arr + startIndex;
     p2 = arr + endIndex;
-    printf("startIndex: %d, endIndex: %d \n", startIndex,endIndex);
     for(int i = 0; i<(((endIndex - startIndex)/2) + ((endIndex - startIndex)%2)); i++) {
-        //printf("i: %d, *p1 = %d, *p2 = %d\n", i,*p1,*p2);
         int temp = *p1;
         *p1 = *p2;
         *p2 = temp;
