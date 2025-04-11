@@ -5,7 +5,7 @@ int bin_grey(int n) {
     return n ^ (n >> 1);
 } 
 int* grayCode(int n, int* returnSize) {
-    *returnSize = (2 << (n-1));
+    *returnSize = (1 << (n));
     int* result = (int*)malloc(sizeof(int) * (*returnSize));
     int count = 0;
     while(count < (*returnSize)) {
