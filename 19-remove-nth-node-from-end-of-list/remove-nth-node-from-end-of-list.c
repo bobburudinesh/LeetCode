@@ -27,6 +27,7 @@ struct ListNode* removeNthFromEnd(struct ListNode* head, int n) {
         }
         if(count == indexToDelete) {
             prevNode->next = l1->next;
+            free(l1);
             break;
         }
         count++;
