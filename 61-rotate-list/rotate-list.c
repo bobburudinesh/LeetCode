@@ -5,9 +5,6 @@
  *     struct ListNode *next;
  * };
  */
-void reverseLinkedList(struct ListNode* head, int from, int to) {
-
-}
 struct ListNode* rotateRight(struct ListNode* head, int k) {
     if(!k || (!head) || (!head->next)) {
         return head;
