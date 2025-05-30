@@ -16,7 +16,6 @@ struct ListNode* rotateRight(struct ListNode* head, int k) {
     struct ListNode *p = head, *q = head, *lastNode = NULL;
     while(p) {
         length++;
-        printf("%d:%p\n", p->val, p);
         p = p->next;
     }
     p = head;
@@ -26,20 +25,13 @@ struct ListNode* rotateRight(struct ListNode* head, int k) {
         count++;
     }
     while(p) {
-        //printf("AFTER:Q: %d:%p      :P:  %d:%p          lastNode:%p\n", q->val, q, p->val, p,lastNode);
-        
         if(!p->next){
-            
             lastNode = p;
-            //printf("AFTER IN IF:Q: %d:%p      :P:  %d:%p          lastNode:%p\n", q->val, q, p->val, p,lastNode);
             break;
         }
         q = q->next;
         p = p->next;
-        
-        
     }
-
     lastNode->next = head;
     head = q->next;
     q->next = NULL;
