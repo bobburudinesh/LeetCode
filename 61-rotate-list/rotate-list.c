@@ -9,15 +9,15 @@ struct ListNode* rotateRight(struct ListNode* head, int k) {
     if(!k || (!head) || (!head->next)) {
         return head;
     }
-    int length = 0,count = 0, shift = 0;
+    int length = 0,count = 0;
     struct ListNode *p = head, *q = head, *lastNode = NULL;
     while(p) {
         length++;
         p = p->next;
     }
     p = head;
-    shift = k % length;
-    while(count < shift) {
+    length = k % length;
+    while(count < length) {
         p = p->next;
         count++;
     }
