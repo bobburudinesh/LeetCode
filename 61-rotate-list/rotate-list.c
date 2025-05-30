@@ -5,19 +5,20 @@
  *     struct ListNode *next;
  * };
  */
+
 struct ListNode* rotateRight(struct ListNode* head, int k) {
     if(!k || (!head) || (!head->next)) {
         return head;
     }
-    int length = 0,count = 0;
+    int length = 0,count = 0, shift = 0;
     struct ListNode *p = head, *q = head, *lastNode = NULL;
     while(p) {
         length++;
         p = p->next;
     }
     p = head;
-    length = k % length;
-    while(count < length) {
+    shift = k % length;
+    while(count < shift) {
         p = p->next;
         count++;
     }
