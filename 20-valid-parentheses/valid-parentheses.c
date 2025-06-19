@@ -13,7 +13,7 @@ bool isValid(char* s) {
     if(length < 2) {
         return false;
     }
-    char arr[MAX] = {};
+    char arr[length] = {};
     bool result = true;
     while(i<length) {
         if(s[i] == '(' || s[i] == '{' || s[i] == '[') {
