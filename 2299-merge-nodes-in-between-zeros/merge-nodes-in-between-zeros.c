@@ -11,28 +11,21 @@ struct ListNode* mergeNodes(struct ListNode* head) {
     }
 
     struct ListNode *p, *q;
-    p = head;
+    p = head->next;;
     int count;
-    bool isListStarted = false;
+    q= head;
     while(p) {
         if(p->val != 0) {
-            isListStarted = true;
             count += p->val;
         } else {
-            if(isListStarted) {
-                q->val = count;
-                if(!p->next) {
-                    q->next =NULL;
-                } else {
-                    q->next = p;
-                }
-                
-            }
+            q->val = count;
             count = 0;
-            q = p;
+            q->next = p->next;
+            q = q->next;
         }
         p = p->next;
     }
-    q->next = NULL;
+    free(p);
+    free(q);
     return head;
 }
