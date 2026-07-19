@@ -3,7 +3,7 @@ public:
     string convertToTitle(int columnNumber) {
         std::string res = "";
         // 65 -> A ---> 1
-        int ascii_base = static_cast<int>('A') - 1;
+        int ascii_base = static_cast<int>('A') - 1;  //handing 1 based indexing based on Ascii value
         int column_num = columnNumber;
         while(column_num) {
             int rem = column_num % 26;
