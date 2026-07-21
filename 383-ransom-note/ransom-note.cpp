@@ -6,18 +6,14 @@ public:
         }
         std::unordered_map<char, int> map1;
         for (char c : magazine) {
-            if(map1.contains(c)) {
+            //if(map1.contains(c)) {
                 map1[c]++;
-            } else {
-                map1.insert({c, 1});
-            }
+            //}
         }
         for(char c : ransomNote) {
 
-            if(map1.contains(c) && map1[c] >= 1) {
-                
+            if(map1[c] >= 1) {
                 map1[c]--;
-                
             } else {
                 return false;
             }
