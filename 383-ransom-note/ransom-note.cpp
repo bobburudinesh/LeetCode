@@ -14,12 +14,9 @@ public:
         }
         for(char c : ransomNote) {
 
-            if(map1.contains(c)) {
-                if(map1[c] <= 0) {
-                    return false;
-                } else {
-                    map1[c]--;
-                }
+            if(map1.contains(c) && map1[c] >= 1) {
+                
+                map1[c]--;
                 
             } else {
                 return false;
