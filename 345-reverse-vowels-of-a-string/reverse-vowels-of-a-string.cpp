@@ -24,11 +24,9 @@ public:
                 q--;
             }
             if (pIsVowel&& qIsVowel) {
-                cout << "Before: " << *p << " " << *q << ";"; 
                 char c = *p;
                 *p = *q;
                 *q = c;
-                cout << "After: " << *p << " " << *q << endl; 
                 q--;
                 p++;
             }
