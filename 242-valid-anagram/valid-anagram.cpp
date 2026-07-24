@@ -3,6 +3,6 @@ public:
     bool isAnagram(string s, string t) {
         std::sort(s.begin(), s.end());
         std::sort(t.begin(), t.end());
-        return s.compare(t) == 0;
+        return s == t;
     }
 };
