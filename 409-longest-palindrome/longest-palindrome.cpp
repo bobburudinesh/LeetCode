@@ -14,8 +14,8 @@ public:
             }
         }
         
-        len = len + (odd_present ? 1 : 0);
+        
 
-        return len;
+        return len + (odd_present ? 1 : 0);
     }
 };
