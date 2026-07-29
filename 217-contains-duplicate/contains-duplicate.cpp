@@ -1,10 +1,11 @@
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
-        std::unordered_map<int, int> map;
-        for(int i : nums){
-            map[i]++;
-            if(map[i] >= 2) {
+        
+        sort(nums.begin(), nums.end());
+        for(int i = 1; i< nums.size(); i++){
+            
+            if(nums[i - 1] == nums[i]) {
                 return true;
             } 
         }
